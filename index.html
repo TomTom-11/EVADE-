@@ -57,10 +57,9 @@
 </head>
 <body>
   <div class="card">
-    <!-- Avatar Roblox -->
-    <img src="https://www.roblox.com/headshot-thumbnail/image?userId=2250219039&width=420&height=420&format=png" alt="Avatar Roblox" width="150" height="150"/>
+    <!-- Avatar Roblox corrigé avec CDN -->
+    <img src="https://tr.rbxcdn.com/headshot-thumbnail/image?userId=2250219039&width=420&height=420&format=png" alt="Avatar Roblox" width="300" height="300"/>
 
-    <!-- Nom d'utilisateur -->
     <h2 id="roblox-username">Chargement...</h2>
     <p>Profil Roblox officiel</p>
 
@@ -76,7 +75,6 @@
   </div>
 
   <script>
-    // Charger le pseudo automatiquement via l’API Roblox
     fetch('https://users.roblox.com/v1/users/2250219039')
       .then(res => res.json())
       .then(data => {
@@ -86,8 +84,7 @@
         document.getElementById('roblox-username').textContent = 'Nom indisponible';
       });
 
-    // ⚙️ Activer ou désactiver le bouton Discord
-    const discordId = '123456789012345678'; // ← Mets ici son vrai ID Discord si tu veux activer le bouton
+    const discordId = '123456789012345678'; // Remplace par vrai ID Discord si besoin
 
     if (discordId && discordId !== '123456789012345678') {
       const discordBtn = document.querySelector('.btn.discord');
