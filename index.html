@@ -2,95 +2,57 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Profil Roblox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profil SweetJustForYou - Roblox Evade</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(145deg, #f9f9f9, #e0e0e0);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f0f0f0, #d0d0d0);
       text-align: center;
-      padding-top: 60px;
+      padding: 50px 20px;
     }
     .card {
       background: white;
+      max-width: 350px;
+      margin: auto;
       padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      display: inline-block;
-      max-width: 350px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
-    img {
-      border-radius: 50%;
-      border: 3px solid #ccc;
-    }
-    h2 {
-      margin: 15px 0 5px;
-      font-size: 24px;
-    }
-    p {
-      color: #666;
-      font-size: 14px;
+    .card img {
+      width: 300px;
+      border-radius: 15px;
       margin-bottom: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      user-select: none;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #333;
+      user-select: none;
     }
     .btn {
+      display: inline-block;
       background: #ff4747;
       color: white;
-      padding: 10px 20px;
+      font-weight: 700;
+      padding: 12px 30px;
+      border-radius: 10px;
       text-decoration: none;
-      border-radius: 8px;
-      display: block;
-      margin: 10px auto;
-      font-weight: bold;
-      width: 80%;
-      transition: background 0.3s;
+      transition: background-color 0.3s ease;
+      user-select: none;
     }
     .btn:hover {
       background: #d93030;
-    }
-    .btn.discord {
-      background: #5865F2;
-    }
-    .btn.discord:hover {
-      background: #4752c4;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <!-- Avatar Roblox corrigé avec CDN -->
-    <img src="https://tr.rbxcdn.com/headshot-thumbnail/image?userId=2250219039&width=420&height=420&format=png" alt="Avatar Roblox" width="300" height="300"/>
-
-    <h2 id="roblox-username">Chargement...</h2>
-    <p>Profil Roblox officiel</p>
-
-    <!-- Bouton Ajouter sur Roblox -->
-    <a href="https://www.roblox.com/users/2250219039/profile" class="btn" target="_blank">
-      Ajouter sur Roblox
-    </a>
-
-    <!-- Bouton Discord (facultatif - remplace l’ID si tu veux l’activer) -->
-    <a href="https://discord.com/users/123456789012345678" class="btn discord" target="_blank" style="display: none;">
-      Ajouter sur Discord
-    </a>
+    <img src="https://static.wikia.nocookie.net/roblox/images/3/37/Evade_Title_Screen.png" alt="Roblox Evade" />
+    <h1>SweetJustForYou</h1>
+    <a href="https://www.roblox.com/users/2250219039/profile" target="_blank" class="btn">Ajouter sur Roblox</a>
   </div>
-
-  <script>
-    fetch('https://users.roblox.com/v1/users/2250219039')
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById('roblox-username').textContent = data.name;
-      })
-      .catch(() => {
-        document.getElementById('roblox-username').textContent = 'Nom indisponible';
-      });
-
-    const discordId = '123456789012345678'; // Remplace par vrai ID Discord si besoin
-
-    if (discordId && discordId !== '123456789012345678') {
-      const discordBtn = document.querySelector('.btn.discord');
-      discordBtn.href = `https://discord.com/users/${discordId}`;
-      discordBtn.style.display = 'block';
-    }
-  </script>
 </body>
 </html>
