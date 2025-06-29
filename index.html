@@ -7,21 +7,22 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap');
 
-    body {
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* ❌ désactive le scroll */
+      height: 100%;
       font-family: 'Roboto', sans-serif;
       background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
       background-size: cover;
-      margin: 0;
-      padding: 50px 20px;
       color: #5a2a46;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      overflow: hidden;
     }
+
     .card {
-      background: rgba(255, 240, 245, 0.85); /* light pink translucent */
+      background: rgba(255, 240, 245, 0.85);
       max-width: 650px;
       padding: 40px 35px;
       border-radius: 25px;
@@ -30,6 +31,7 @@
       user-select: none;
       animation: fadeIn 1.5s ease forwards;
     }
+
     h1 {
       font-family: 'Pacifico', cursive;
       font-size: 42px;
@@ -37,6 +39,7 @@
       color: #b33951;
       animation: popIn 1s ease forwards;
     }
+
     p {
       font-size: 20px;
       color: #7b4f63;
@@ -44,11 +47,13 @@
       line-height: 1.6;
       animation: fadeIn 1.5s ease forwards 0.5s;
     }
+
     a.link {
       color: #b33951;
       text-decoration: underline;
       font-weight: 600;
     }
+
     .btn {
       display: inline-block;
       background: #d36c89;
@@ -63,6 +68,7 @@
       box-shadow: 0 8px 15px rgba(211, 108, 137, 0.4);
       animation: popIn 1s ease forwards 0.8s;
     }
+
     .btn:hover {
       background: #a84b63;
       transform: scale(1.05);
@@ -74,6 +80,7 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
     @keyframes popIn {
       0% {
         opacity: 0;
@@ -85,7 +92,7 @@
       }
     }
 
-    /* Responsive */
+    /* Responsive (même si on ne scrolle pas, pour téléphones) */
     @media (max-width: 700px) {
       .card {
         padding: 30px 20px;
