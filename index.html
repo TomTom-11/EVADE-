@@ -5,51 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SweetJustForYou - Roblox Evade Profile</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap');
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f0f0f0, #d0d0d0);
-      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
       padding: 50px 20px;
+      color: #5a2a46;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
     }
     .card {
-      background: white;
+      background: rgba(255, 240, 245, 0.85); /* light pink translucent */
       max-width: 650px;
-      margin: auto;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      padding: 40px 35px;
+      border-radius: 25px;
+      box-shadow: 0 15px 30px rgba(255, 192, 203, 0.6);
+      text-align: center;
       user-select: none;
+      animation: fadeIn 1.5s ease forwards;
     }
     h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-      color: #333;
-      user-select: none;
+      font-family: 'Pacifico', cursive;
+      font-size: 42px;
+      margin-bottom: 25px;
+      color: #b33951;
+      animation: popIn 1s ease forwards;
     }
     p {
-      font-size: 18px;
-      color: #444;
-      margin-bottom: 30px;
-      line-height: 1.5;
+      font-size: 20px;
+      color: #7b4f63;
+      margin-bottom: 35px;
+      line-height: 1.6;
+      animation: fadeIn 1.5s ease forwards 0.5s;
     }
     a.link {
-      color: #ff4747;
+      color: #b33951;
       text-decoration: underline;
+      font-weight: 600;
     }
     .btn {
       display: inline-block;
-      background: #ff4747;
+      background: #d36c89;
       color: white;
       font-weight: 700;
-      padding: 12px 30px;
-      border-radius: 10px;
+      padding: 14px 38px;
+      border-radius: 25px;
       text-decoration: none;
-      transition: background-color 0.3s ease;
-      font-size: 18px;
+      font-size: 20px;
+      transition: background-color 0.4s ease, transform 0.3s ease;
       user-select: none;
+      box-shadow: 0 8px 15px rgba(211, 108, 137, 0.4);
+      animation: popIn 1s ease forwards 0.8s;
     }
     .btn:hover {
-      background: #d93030;
+      background: #a84b63;
+      transform: scale(1.05);
+      box-shadow: 0 12px 20px rgba(168, 75, 99, 0.6);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes popIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .card {
+        padding: 30px 20px;
+      }
+      h1 {
+        font-size: 34px;
+      }
+      p {
+        font-size: 18px;
+      }
+      .btn {
+        font-size: 18px;
+        padding: 12px 30px;
+      }
     }
   </style>
 </head>
